@@ -1,0 +1,10 @@
+# Report
+*.out
+*.log
+*.toc
+*.aux
+*.synctex.gz
+*.rsf
+*.tex
+*.graphml
+bmstu.png
