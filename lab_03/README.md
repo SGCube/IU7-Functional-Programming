@@ -56,3 +56,17 @@
 (car (list one two))
 (car (list 'one 'two))
 ```
+
+## Задание 7
+
+Дана функция
+```
+(defun mystery (x) (list (second x) (first x)))
+```.
+Какие результаты вычисления следующих выражений?
+```
+(mystery (one two))	(mystery one 'two))
+(mystery (last one two))	
+(mystery free)	
+(mystery one 'two))
+```
