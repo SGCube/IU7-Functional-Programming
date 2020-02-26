@@ -65,7 +65,7 @@
 ```.
 Какие результаты вычисления следующих выражений?
 ```
-(mystery (one two))	(mystery one 'two))
+(mystery (one two))
 (mystery (last one two))	
 (mystery free)	
 (mystery one 'two))
