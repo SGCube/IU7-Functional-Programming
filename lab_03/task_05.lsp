@@ -1,0 +1,5 @@
+(defun longer_than (list1 list2) (> (length list1) (length list2)))
+(prin1 (longer_than '('a) nil))
+(print (longer_than '('a 'b) '('a )))
+(print (longer_than '('a 'b) '('a 'b)))
+(print (longer_than '('a 'b 'c) '('a '('a 'b) 'c)))
