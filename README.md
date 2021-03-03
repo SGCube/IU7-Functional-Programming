@@ -66,6 +66,7 @@
       <td>❌</td>
    </tr>
    <tr>
+   <tr>
       <td>8</td>
       <td></td>
       <td></td>
