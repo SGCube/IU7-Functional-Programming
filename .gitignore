@@ -7,4 +7,7 @@
 *.rsf
 *.tex
 *.graphml
+*.docx
+**/schemes/**
+**/def/**
 bmstu.png

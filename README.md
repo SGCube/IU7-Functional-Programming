@@ -1,45 +1,92 @@
-# IU7-Functional-and-Logic-Programming
-Лабораторные работу по курсу "Функциональное и логическое программирование", ИУ7 2020г.
+# IU7-Functional-Programming
+Лабораторные работу по курсу "Функциональное программирование", ИУ7 2021г.
 
 ## Список лабораторных работ
 
 <table>
    <tr>
    <tr>
-    <th>ЛР</th>
-    <th>Тема</th>
-    <th>Программа</th>
-    <th>Отчёт</th>
+      <th>ЛР</th>
+      <th>Тема</th>
+      <th>Код</th>
+      <th>Отчёт</th>
+      <th>Сдано</th>
    </tr>
    <tr>
-    <td>1</td>
-    <td rowspan=3>Списки в Lisp. Использование стандартных функций.</th>
-    <td>✔️</th>
-    <td>✔️</th>
-   </tr>
-   <tr>
-   <tr>
-    <td>2</td>
-    <td>✔️</th>
-    <td>✔️</th>
+      <td>1</td>
+      <td rowspan=3>Списки в Lisp. Использование стандартных функций.</th>
+      <td>-</td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_01/report.pdf">Отчёт</a></td>
+      <td>✔️</td>
    </tr>
    <tr>
    <tr>
-    <td>3</td>
-    <td rowspan=3>Определение функций пользователя</th>
-    <td></th>
-    <td></th>
+      <td>2</td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_02">Код</a></td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_02/report.pdf">Отчёт</a></td>
+      <td>⭕️</td>
+   </tr>
+   <tr>
+      <tr>
+      <td>3</td>
+      <td rowspan=3>Определение функций пользователя</th>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_03">Код</a></td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_03/report.pdf">Отчёт</a></td>
+      <td>⭕️</td>
    </tr>
    <tr>
    <tr>
-    <td>4</td>
-    <td></th>
-    <td></th>
+      <td>4</td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_04">Код</a></td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_04/report.pdf">Отчёт</a></td>
+      <td>⭕️</td>
    </tr>
    <tr>
-    <th colspan = "2">Итог</th>
-    <th colspan = "2"></th>
+      <td>5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>❌</td>
+   </tr>
+   <tr>
+      <td>6</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>❌</td>
+   </tr>
+   <tr>
+      <td>7</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>❌</td>
+   </tr>
+   <tr>
+      <td>8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>❌</td>
+   </tr>
+   <tr>
+      <td>9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>❌</td>
+   </tr>
+   <tr>
+      <td>10</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>❌</td>
+   </tr>
+   <tr>
+      <th colspan = "2">Итог</th>
+      <th colspan = "2"></th>
    </tr>
 </table>
 
-✔️ - выполнен(а), ⚠️ - требует доработки, ❌ - не выполнен(а)
+✔️ - выполнено, ⭕️ - ожидает проверки, ❌ - не готово
