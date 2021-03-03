@@ -42,6 +42,7 @@
       <td>⭕️</td>
    </tr>
    <tr>
+   <tr>
       <td>5</td>
       <td></td>
       <td></td>
@@ -49,12 +50,14 @@
       <td>❌</td>
    </tr>
    <tr>
+   <tr>
       <td>6</td>
       <td></td>
       <td></td>
       <td></td>
       <td>❌</td>
    </tr>
+   <tr>
    <tr>
       <td>7</td>
       <td></td>
@@ -70,12 +73,14 @@
       <td>❌</td>
    </tr>
    <tr>
+   <tr>
       <td>9</td>
       <td></td>
       <td></td>
       <td></td>
       <td>❌</td>
    </tr>
+   <tr>
    <tr>
       <td>10</td>
       <td></td>
