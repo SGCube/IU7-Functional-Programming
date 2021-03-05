@@ -29,7 +29,6 @@
    </tr>
    <tr>
    <tr>
-      <tr>
       <td>3</td>
       <td>Работа интерпретатора Lisp</th>
       <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_03/code.lsp">Код</a></td>
@@ -59,8 +58,7 @@
       <td>❌</td>
    </tr>
    <tr>
-   <tr>
-   <tr>
+   <tr>   
       <td>7</td>
       <td></td>
       <td></td>
