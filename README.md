@@ -93,7 +93,7 @@
    </tr>
    <tr>
       <th colspan = "2">Итог</th>
-      <th colspan = "2"></th>
+      <th colspan = "3"></th>
    </tr>
 </table>
 
