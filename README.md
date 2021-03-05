@@ -14,7 +14,7 @@
    </tr>
    <tr>
       <td>1</td>
-      <td rowspan=3>Списки в Lisp. Использование стандартных функций.</th>
+      <td>Списки в Lisp. Использование стандартных функций.</th>
       <td>-</td>
       <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_01/report.pdf">Отчёт</a></td>
       <td>✔️</td>
@@ -22,39 +22,44 @@
    <tr>
    <tr>
       <td>2</td>
-      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_02">Код</a></td>
+      <td>Определение функций пользователя</th>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_02/code.lsp">Код</a></td>
       <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_02/report.pdf">Отчёт</a></td>
       <td>⭕️</td>
    </tr>
    <tr>
+   <tr>
       <tr>
       <td>3</td>
-      <td rowspan=3>Определение функций пользователя</th>
-      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_03">Код</a></td>
+      <td>Работа интерпретатора Lisp</th>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_03/code.lsp">Код</a></td>
       <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_03/report.pdf">Отчёт</a></td>
       <td>⭕️</td>
    </tr>
    <tr>
    <tr>
       <td>4</td>
-      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_04">Код</a></td>
+      <td rowspan=6>Использование управляющих структур, работа со списками</td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_04/code.lsp">Код</a></td>
       <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_04/report.pdf">Отчёт</a></td>
       <td>⭕️</td>
    </tr>
    <tr>
+   <tr>
       <td>5</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_05/code.lsp">Код</a></td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_05/report.pdf">Отчёт</a></td>
+      <td>⭕️</td>
+   </tr>
+   <tr>
+   <tr>
+      <td>6</td>
+      <td>-</td>
+      <td>-</td>
       <td>❌</td>
    </tr>
    <tr>
-      <td>6</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>❌</td>
-   </tr>
+   <tr>
    <tr>
       <td>7</td>
       <td></td>
@@ -63,6 +68,7 @@
       <td>❌</td>
    </tr>
    <tr>
+   <tr>
       <td>8</td>
       <td></td>
       <td></td>
@@ -70,12 +76,14 @@
       <td>❌</td>
    </tr>
    <tr>
+   <tr>
       <td>9</td>
       <td></td>
       <td></td>
       <td></td>
       <td>❌</td>
    </tr>
+   <tr>
    <tr>
       <td>10</td>
       <td></td>
