@@ -40,9 +40,13 @@
 ; 5. Простой вариант игры в кости
 
 ; Функция, "бросающая" случайный образом кости
-(defun roll-dice ()  (cons (+ (random 6) 1) (+ (random 6) 1)))
+(defun roll-dice ()  
+    (print (cons (+ (random 6) 1) (+ (random 6) 1)))
+)
+
 ; Функция, складывающая числа на костях
 (defun sum-dices (dice) (+ (car dice) (cdr dice)))
+
 ; Функция, определяющая абсолютную победу по выпавшим костям
 (defun is-win (dice) 
     (or 
@@ -57,14 +61,18 @@
     )
 )
 
+(defun won-msg (dice no)
+    (print )
+)
+
 ; Функция хода
 (defun play-turn (no)
-    (print (format NIL "P~A: ~A" no (setq dice (roll-dice))))
+    (setq dice (roll-dice))
     (if (is-win dice)
-        (print (format NIL "P~A won!" no))
+        (format NIL "P~A won!" no)
         (if (is-retry dice)
             (play-turn no)
-            dice
+            (sum-dices dice)
         )
     ) 
 )
@@ -73,10 +81,12 @@
     (if (numberp (setq p1 (play-turn 1)))
         (if (numberp (setq p2 (play-turn 2)))
             (cond
-                ((> p1 p2) (print "P1 won!"))
-                ((> p2 p1) (print "P2 won!"))
-                (T (print "Tie!"))
+                ((> p1 p2) "P1 won!")
+                ((> p2 p1) "P2 won!")
+                (T "Tie!")
             )
+            p2
         )
+        p1
     )
 )
