@@ -1,6 +1,8 @@
 # IU7-Functional-Programming
 Лабораторные работу по курсу "Функциональное программирование", ИУ7 2021г.
 
+### [Список всех теоретических вопросов из лабораторных работ](https://github.com/SGCube/IU7-Functional-Programming/tree/main/all-theory-questions.pdf)
+
 ## Список лабораторных работ
 
 <table>
@@ -84,7 +86,7 @@
    <tr>
    <tr>
       <td>10</td>
-      <td></td>
+      <td>Вложенные рекурсия и функционалы</td>
       <td></td>
       <td></td>
       <td>❌</td>
