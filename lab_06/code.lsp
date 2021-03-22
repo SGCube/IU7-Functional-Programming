@@ -61,10 +61,6 @@
     )
 )
 
-(defun won-msg (dice no)
-    (print )
-)
-
 ; Функция хода
 (defun play-turn (no)
     (setq dice (roll-dice))
