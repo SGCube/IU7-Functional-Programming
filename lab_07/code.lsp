@@ -54,7 +54,7 @@
     )
 )
 
-; 3. Написать необходимые функции, которые обрабатывают таблицу из 
+; 3. Необходимые функции, которые обрабатывают таблицу из 
 ; точечных пар: (страна . столица) и возвращают по стране – столицу,
 ; а по столице – страну.
 
@@ -74,4 +74,23 @@
     )
 )
 
-; 4. 
+; 4. Функция swap-first-last, которая переставляет в 
+; списке-аргументе первый и последний элементы.
+
+(defun all-but-last-r (lst res)
+    (if (null (cdr lst))
+        res
+        (all-but-last-r (cdr lst) (append res (cons (car lst) Nil)))
+    )
+)
+
+(defun all-but-last (lst)
+    (all-but-last-r lst Nil)
+)
+
+(defun swap-first-last (lst)
+    (if (null (cdr lst))
+        lst
+        (append (last lst) (cdr (all-but-last lst)) (cons (car lst) Nil))
+    )
+)

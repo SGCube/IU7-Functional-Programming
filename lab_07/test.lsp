@@ -1,5 +1,5 @@
-(defun test (result expected)
-    (print (equal result expected))
+(defun test (result expected &optional (eqfunc #'equal))
+    (print (funcall eqfunc result expected))
 )
 
 (format T "1) palindrom")
@@ -49,4 +49,17 @@
     (get-state 'Tokio '((Russia . Moscow) (UK . London) (USA . Washington) (Japan . Tokio)))
     (get-state 'Berlin '((Russia . Moscow) (UK . London) (USA . Washington) (Japan . Tokio)))
 ) '(Nil Russia Nil Russia UK Japan Nil)
+)
+
+(format T "~%4) swap-first-last")
+(mapcar #'test (list
+    (swap-first-last '())
+    (swap-first-last '(A))
+    (swap-first-last '(A B))
+    (swap-first-last '(A A))
+    (swap-first-last '(A B C D E))
+    (swap-first-last '((A B) C D (E)))
+) 
+'(()(A)(B A)(A A)(E B C D A)((E) C D (A B)))
+'(equalp equalp equalp equalp equalp)
 )
