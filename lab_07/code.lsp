@@ -53,3 +53,25 @@
         (T (and (my-subsetp set1 set2) (my-subsetp set2 set1)))
     )
 )
+
+; 3. Написать необходимые функции, которые обрабатывают таблицу из 
+; точечных пар: (страна . столица) и возвращают по стране – столицу,
+; а по столице – страну.
+
+(defun get-capital (state lst)
+    (cond
+        ((null lst) Nil)
+        ((equal (car (car lst)) state) (cdr (car lst)))
+        (T (get-capital state (cdr lst)))
+    )
+)
+
+(defun get-state (capital lst)
+    (cond
+        ((null lst) Nil)
+        ((equal (cdr (car lst)) capital) (car (car lst)))
+        (T (get-state capital (cdr lst)))
+    )
+)
+
+; 4. 
