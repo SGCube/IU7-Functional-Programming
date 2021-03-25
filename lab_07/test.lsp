@@ -63,3 +63,16 @@
 '(()(A)(B A)(A A)(E B C D A)((E) C D (A B)))
 '(equalp equalp equalp equalp equalp)
 )
+
+(format T "~%5) swap-two-element")
+(mapcar #'test (list
+    (swap-two-element '() 0 0)
+    (swap-two-element '(A) 0 0)
+    (swap-two-element '(A B) 0 1)
+    (swap-two-element '(A B) 0 0)
+    (swap-two-element '(A B C D E) 1 3)
+    (swap-two-element '((A B) C D (E)) 2 0)
+) 
+'(()(A)(B A)(A B)(A D C B E)(D C (A B) (E)))
+'(equalp equalp equalp equalp equalp)
+)
