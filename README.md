@@ -77,9 +77,9 @@
    <tr>
       <td>9</td>
       <td>Использование функционалов и рекурсии</td>
-      <td></td>
-      <td></td>
-      <td>❌</td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_09/code.lsp">Код</a></td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_09/report.pdf">Отчёт</a></td>
+      <td>⭕️</td>
    </tr>
    <tr>
    <tr>
