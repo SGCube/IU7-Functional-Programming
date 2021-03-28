@@ -1,12 +1,42 @@
 ; 5.7
 
-(defun multiply-by-numb (lst k) lst)
+(defun multiply-by-numb (lst k)
+    (cond
+        ((null lst) Nil)
+        (T (cons (* (car lst) k)
+            (multiply-by-numb (cdr lst) k))
+        )
+    )
+)
 
-(defun multiply-by (lst k) lst)
+(defun multiply-by (lst k)
+    (if (null lst) Nil
+        (cons
+            (cond
+                ((listp (car lst)) (multiply-by (car lst) k))
+                ((numberp (car lst)) (* (car lst) k))
+                (T (car lst))
+            )
+            (multiply-by (cdr lst) k)
+        )
+    )
+)
 
-(defun multiply-by-numb-f (lst k) lst)
+(defun multiply-by-numb-f (lst k)
+    (mapcar #'(lambda (x) (* x k)) lst)
+)
 
-(defun multiply-by-f (lst k) lst)
+(defun multiply-by-f (lst k) 
+    (mapcar #'(lambda (x)
+            (cond
+                ((listp x) (multiply-by x k))
+                ((numberp x) (* x k))
+                (T x)
+            )
+        )
+        lst
+    )
+)
 
 ; 5.8
 
