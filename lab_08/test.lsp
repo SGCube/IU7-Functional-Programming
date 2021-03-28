@@ -154,4 +154,17 @@
     '(0 0 25 16 28.1)
 )
 
+(test-func-group 
+    "sum-all-numbers-r"
+    #'sum-all-numbers-r
+    '( 
+        (())
+        ((A B DE E C))
+        ((5 4 10 5 1))
+        ((5 1 6 A 4))
+        ((5 A (A 4 (5 6)) 0.1 T B C (S 4) 4))
+    )
+    '(0 0 25 16 28.1)
+)
+
 ))

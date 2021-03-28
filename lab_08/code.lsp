@@ -129,4 +129,29 @@
 
 ; numb-sum
 
-(defun sum-all-numbers (lst) 0)
+(defun sum-all-numbers (lst)
+    (reduce #'(lambda (sum x)
+            (+ sum
+                (cond
+                    ((listp x) (sum-all-numbers x))
+                    ((numberp x) x)
+                    (T 0)
+                )
+            )
+        )
+        lst
+        :initial-value 0
+    )
+)
+
+(defun sum-all-numbers-r (lst)
+    (if (null lst) 0
+        (+ (sum-all-numbers-r (cdr lst))
+            (cond
+                ((listp (car lst)) (sum-all-numbers-r (car lst)))
+                ((numberp (car lst)) (car lst))
+                (T 0)
+            )
+        )
+    )
+)
