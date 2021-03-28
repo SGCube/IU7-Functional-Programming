@@ -119,7 +119,13 @@
 
 ; 6.3
 
-(defun get-first-arg (lst) Nil)
+(defun get-first-arg (lst)
+    (cond
+        ((null lst) Nil)
+        ((and (listp (car lst)) (not (null (car lst)))) (car lst))
+        (T (get-first-arg (cdr lst)))
+    )
+)
 
 ; numb-sum
 
