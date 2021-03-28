@@ -98,49 +98,43 @@
 ; 5. Функция swap-two-element, которая переставляет в списке-аргументе 
 ; два указателя своими порядковыми номерами элемента в этом списке. 
 
-(defun slice-len-r (lst i res)
-    (if (or (null lst) (<= i 0))
-        res
-        (slice-len-r (cdr lst) (- i 1) (append res (cons (car lst) Nil)))
-    )
-)
-
-(defun slice-len (lst i)
-    (slice-len-r lst i Nil)
-)
-
-(defun slice-start-with (lst i)
-    (if (or (null lst) (<= i 0))
-        lst
-        (slice-start-with (cdr lst) (- i 1))
-    )
-)
-
 (defun my-nth (lst i)
-    (cons (car (slice-start-with lst i)) Nil)
+    (cond
+        ((null lst) Nil)
+        ((= i 0) (car lst))
+        (T (my-nth (cdr lst) (- i 1)))
+    )
 )
 
-(defun slice-between (lst i j)
-    (slice-len (slice-start-with lst i) (- j i))
+(defun cons-left (lst)
+    (if (null lst)
+        Nil
+        (cons (car lst) (cons-left (cdr lst)))
+    )
 )
 
-(defun swap-two-element-r (lst i j)
-    (if (null (cdr lst))
-        lst
-        (append
-            (slice-len lst i)
-            (my-nth lst j)
-            (slice-between lst (+ i 1) j)
-            (my-nth lst i)
-            (slice-start-with lst (+ j 1))
+(defun swap-two-element-r (lst i j elem-to-place)
+    (cond
+        ((null lst) Nil)
+        ((= i 0) 
+            (cons elem-to-place
+                (if (< j 0)
+                    (cons-left (cdr lst))
+                    (swap-two-element-r (cdr lst) (- j 1) i (car lst))
+                )
+            )
+        )
+        (T (cons (car lst)
+            (swap-two-element-r (cdr lst) (- i 1) (- j 1) elem-to-place))
         )
     )
 )
 
 (defun swap-two-element (lst i j)
     (cond 
+        ((null lst) lst)
         ((= i j) lst)
-        ((> i j) (swap-two-element-r lst j i))
-        (T (swap-two-element-r lst i j))
+        ((> i j) (swap-two-element-r lst j i (my-nth lst i)))
+        (T (swap-two-element-r lst i j (my-nth lst j)))
     )
 )
