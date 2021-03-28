@@ -94,9 +94,28 @@
 
 ; 6.2
 
-(defun decrease-by-10 (lst) lst)
+(defun decrease-by-10 (lst)
+    (if (null lst) Nil
+        (cons
+            (cond
+                ((listp (car lst)) (decrease-by-10 (car lst)))
+                ((numberp (car lst)) (- (car lst) 10))
+                (T (car lst))
+            )
+            (decrease-by-10 (cdr lst))
+        )
+    )
+)
 
-(defun decrease-by-10-f (lst) lst)
+(defun decrease-by-10-f (lst)
+    (mapcar #'(lambda (x) (cond
+            ((listp x) (decrease-by-10-f x))
+            ((numberp x) (- x 10))
+            (T x)
+            )
+        ) lst
+    )
+)
 
 ; 6.3
 
