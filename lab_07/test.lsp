@@ -76,3 +76,27 @@
 '(()(A)(B A)(A B)(A D C B E)(D C (A B) (E)))
 '(equalp equalp equalp equalp equalp)
 )
+
+(format T "~%6.1) swap-to-left")
+(mapcar #'test (list
+    (swap-to-left '())
+    (swap-to-left '(A))
+    (swap-to-left '(A B))
+    (swap-to-left '(A B C D E))
+    (swap-to-left '((A B) C D (E)))
+) 
+'(()(A)(B A)(B C D E A)(C D (E) (A B)))
+'(equalp equalp equalp equalp equalp)
+)
+
+(format T "~%6.2) swap-to-right")
+(mapcar #'test (list
+    (swap-to-right '())
+    (swap-to-right '(A))
+    (swap-to-right '(A B))
+    (swap-to-right '(A B C D E))
+    (swap-to-right '((A B) C D (E)))
+) 
+'(()(A)(B A)(E A B C D)((E) (A B) C D))
+'(equalp equalp equalp equalp equalp)
+)
