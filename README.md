@@ -71,9 +71,9 @@
    <tr>
       <td>8</td>
       <td>Использование функционалов</td>
-      <td></td>
-      <td></td>
-      <td>❌</td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_08/code.lsp">Код</a></td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_08/report.pdf">Отчёт</a></td>
+      <td>⭕️</td>
    </tr>
    <tr>
    <tr>
