@@ -63,9 +63,9 @@
    <tr>   
       <td>7</td>
       <td>Использование управляющих структур, модификация списков</td>
-      <td></td>
-      <td></td>
-      <td>❌</td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_07/code.lsp">Код</td>
+      <td><a href="https://github.com/SGCube/IU7-Functional-Programming/tree/main/lab_07/report.lsp">Отчёт</td>
+      <td>⭕️</td>
    </tr>
    <tr>
    <tr>
