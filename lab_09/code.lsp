@@ -1,4 +1,5 @@
-; 6.4
+; 6.4. Функция, которая выбирает из заданного списка только те числа,
+; которые больше 1 и меньше 10.
 
 (defun is-between (x a b)
     (and (<= a x) (<= x b))
@@ -45,3 +46,28 @@
         (T (sel-between-f lst a b Nil))
     )
 )
+
+; 6.5. Функция, вычисляющую декартово произведение двух своих
+; списков-аргументов.
+
+(defun add-to-set (lst el)
+    (cond 
+        ((null lst) (cons el Nil))
+        ((equalp el (car lst)) lst)
+        (t (cons (car lst) (add-to-set (cdr lst) el)))
+    )
+)
+
+(defun lst-to-set (lst)
+    (reduce #'add-to-set lst :initial-value Nil)
+)
+
+(defun decart (a b)
+	(mapcan	#'(lambda (x)
+            (mapcar	#'(lambda (y) (cons x y)
+                ) (lst-to-set b)
+            )
+	    ) (lst-to-set a)
+	)
+)
+
