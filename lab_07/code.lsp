@@ -1,5 +1,5 @@
 ; 1. Функция, которая по своему списку-аргументу lst определяет, 
-; является ли он палиндромом (т. е. равны ли lst и ‘(reverse lst)).
+; является ли он палиндромом (т. е. равны ли lst и '(reverse lst)).
 
 (defun my-reverse (lst)
     (funcall
@@ -136,5 +136,29 @@
         ((= i j) lst)
         ((> i j) (swap-two-element-r lst j i (my-nth lst i)))
         (T (swap-two-element-r lst i j (my-nth lst j)))
+    )
+)
+
+; 6. Функции swap-to-left и swap-to-right, которые производят круговую
+; перестановку в списке-аргументе влево и вправо, соответственно.
+
+(defun swap-to-left (lst)
+    (if (null lst)
+        lst
+        (append (cdr lst) (cons (car lst) Nil))
+    )
+)
+
+(defun my-last (lst)
+    (if (null (cdr lst))
+        (car lst)
+        (my-last (cdr lst))
+    )
+)
+
+(defun swap-to-right (lst)
+    (if (null lst)
+        lst
+        (append (cons (my-last lst) Nil) (all-but-last lst))
     )
 )
