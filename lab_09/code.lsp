@@ -71,3 +71,23 @@
 	)
 )
 
+; 6.7. Пусть list-of-list список, состоящий из списков.
+; Написать функцию, которая вычисляет сумму длин всех элементов list-of-list
+
+(defun my-length (lst)
+    (reduce #'(lambda (x y) (+ x 1))
+        lst
+        :initial-value 0
+    )
+)
+
+
+(defun sum-len (list-of-list)
+    (reduce #'+
+        (mapcar #'(lambda (x)
+                (if (listp x) (my-length x) 1)
+            )
+            list-of-list
+        )
+    )
+)
