@@ -40,7 +40,57 @@
 
 ; 5.8
 
-(defun select-between (lst a b) Nil)
+(defun add-to-sorted-asc (lst x)
+    (cond
+        ((null lst) (cons x Nil))
+        ((< x (car lst)) (cons x lst))
+        (T (cons (car lst) (add-to-sorted-asc (cdr lst) x)))
+    )
+)
+
+(defun is-between (x a b)
+    (and (<= a x) (<= x b))
+)
+
+(defun sel-between-r (lst a b res)
+    (if (null lst) res
+        (sel-between-r (cdr lst) a b 
+            (if (is-between (car lst) a b)
+                (add-to-sorted-asc res (car lst))
+                res
+            )
+        )
+    )
+)
+
+(defun select-between (lst a b)
+    (cond
+        ((null lst) Nil)
+        ((> a b) (sel-between-r lst b a Nil))
+        (T (sel-between-r lst a b Nil))
+    )
+)
+
+(defun sel-between-f (lst a b)
+	(reduce #'(lambda (xlst x)
+            (cond
+                ((not (is-between x a b)) xlst)
+                ((null xlst) (cons x Nil))
+                (T (add-to-sorted-asc xlst x))
+            )
+        )
+		lst
+        :initial-value Nil
+    )
+)
+
+(defun select-between-f (lst a b)
+    (cond
+        ((null lst) Nil)
+        ((> a b) (sel-between-f lst b a))
+        (T (sel-between-f lst a b))
+    )
+)
 
 ; 6.2
 
